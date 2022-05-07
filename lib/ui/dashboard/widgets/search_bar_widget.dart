@@ -23,8 +23,8 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
     return Padding(
       padding: EdgeInsets.only(
           top: SizeConfig.heightAdjusted(7),
-          left: SizeConfig.widthAdjusted(3),
-          right: SizeConfig.widthAdjusted(3)),
+          left: SizeConfig.widthAdjusted(2),
+          right: SizeConfig.widthAdjusted(2)),
       child: Column(
         children: [
           Row(
