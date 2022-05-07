@@ -4,8 +4,9 @@ class GlobalColors {
   static Color lightGreen = const Color(0xff219653);
   static Color globalRed = const Color(0xffeb5757);
   static Color globalBlack = const Color(0xff000000);
+  static Color globalAsh = const Color(0xff5f5f5f);
   static Color blueWhite = const Color(0xfff0f3f4);
-  static Color ashWhite = const Color(0xfff0f3f5);
+  static Color ashWhite = const Color(0xfff4f4f5);
   static Color globalWhite = const Color(0xffffffff);
 
   static const MaterialColor materialPrimaryColor = MaterialColor(

@@ -12,7 +12,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       body: OrientationBuilder(
         builder: (context, orientation) => orientation == Orientation.portrait
-            ? const DashboardPortrait()
+            ? DashboardPortrait()
             : const DashboardLandscape(),
       ),
     );
