@@ -43,7 +43,7 @@ class Body extends StatelessWidget {
                         ),
                         child: DefaultButton(
                           text: "Add To Cart",
-                          press: () {},
+                          onPress: () {},
                         ),
                       ),
                     ),

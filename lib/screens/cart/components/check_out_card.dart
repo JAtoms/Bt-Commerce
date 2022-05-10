@@ -79,7 +79,7 @@ class CheckoutCard extends StatelessWidget {
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
                     text: "Check Out",
-                    press: () {},
+                    onPress: () {},
                   ),
                 ),
               ],
