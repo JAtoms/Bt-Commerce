@@ -5,15 +5,16 @@ import 'components/body.dart';
 import 'components/check_out_card.dart';
 
 class CartScreen extends StatelessWidget {
-  static String routeName = "/cart";
+  static String routeName = '/cart';
 
   const CartScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
-      bottomNavigationBar: CheckoutCard(),
+      body: const Body(),
+      bottomNavigationBar: const CheckoutCard(),
     );
   }
 
@@ -21,14 +22,9 @@ class CartScreen extends StatelessWidget {
     return AppBar(
       title: Column(
         children: [
-          Text(
-            "Your Cart",
-            style: TextStyle(color: Colors.black),
-          ),
-          Text(
-            "${demoCarts.length} items",
-            style: Theme.of(context).textTheme.caption,
-          ),
+          const Text('Your Cart', style: TextStyle(color: Colors.black)),
+          Text('${demoCarts.length} items',
+              style: Theme.of(context).textTheme.caption),
         ],
       ),
     );
