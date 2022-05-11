@@ -10,9 +10,12 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: const CustomBottomNavBar(selectedMenu: MenuState.home),
-      body: Body(),
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: const Scaffold(
+        bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+        body: Body(),
+      ),
     );
   }
 }
