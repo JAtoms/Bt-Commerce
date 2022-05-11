@@ -32,6 +32,6 @@ A short video has been added to explain how the app works.
 Sure, you can test the functionality of this App from the link below. The app is 'provided
 in different apks to suit any device.
 
-- [Test Apps](https://www.loom.com/share/921954adae504e5c9624bd236d52e01c)
+- [Test Apps](https://github.com/JAtoms/Bt-Commerce/tree/dashboard/assets/test_app)
 
 
