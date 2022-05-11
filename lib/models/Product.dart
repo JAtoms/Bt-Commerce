@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Product {
   final int id;
+  final int discountQuantity;
   final String title, description;
   final List<String> images;
   final List<Color> colors;
@@ -11,6 +12,7 @@ class Product {
   Product({
     required this.id,
     required this.images,
+    required this.discountQuantity,
     required this.colors,
     this.rating = 0.0,
     this.isFavourite = false,
@@ -23,49 +25,68 @@ class Product {
 
 // Our demo Products
 
-List<Product> demoProducts = [
+List<Product> faceMasks = [
   Product(
     id: 1,
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      'assets/images/mask3.png',
+      'assets/images/mask5.png',
+      'assets/images/mask6.png',
+      'assets/images/mask7.png',
     ],
     colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
+    title: 'Premium surgical face masks',
+    price: 2.50,
+    discountQuantity: 2,
     description: description,
     rating: 4.8,
     isFavourite: true,
     isPopular: true,
   ),
   Product(
-    id: 2,
-    images: [
-      "assets/images/Image Popular Product 2.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Nike Sport White - Man Pant",
-    price: 50.5,
-    description: description,
-    rating: 4.1,
-    isPopular: true,
-  ),
+      id: 2,
+      images: [
+        'assets/images/mask1.png',
+      ],
+      colors: [
+        Color(0xFFF6625E),
+        Color(0xFF836DB8),
+        Color(0xFFDECB9C),
+        Colors.white,
+      ],
+      title: 'Brown surgical face mask',
+      price: 2.50,
+      discountQuantity: 2,
+      description: description,
+      rating: 4.1,
+      isPopular: true),
   Product(
-    id: 3,
+      id: 3,
+      images: [
+        'assets/images/mask2.png',
+      ],
+      colors: [
+        Color(0xFFF6625E),
+        Color(0xFF836DB8),
+        Color(0xFFDECB9C),
+        Colors.white
+      ],
+      title: 'White surgical face mask',
+      price: 2.50,
+      discountQuantity: 2,
+      description: description,
+      rating: 4.1,
+      isFavourite: true,
+      isPopular: true),
+  Product(
+    id: 4,
     images: [
-      "assets/images/glap.png",
+      'assets/images/mask4.png',
     ],
     colors: [
       Color(0xFFF6625E),
@@ -73,17 +94,78 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
+    title: 'Premium cotton navy face mask',
+    price: 2.50,
+    discountQuantity: 2,
     description: description,
     rating: 4.1,
+    isFavourite: true,
+  ),
+];
+
+
+
+// Our demo Products
+
+List<Product> toiletRoll = [
+  Product(
+    id: 5,
+    images: [
+      'assets/images/tissue1.png',
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: 'Soft toilet paper (2Ply)',
+    price: 65,
+    discountQuantity: 6,
+    description: description,
+    rating: 4.8,
     isFavourite: true,
     isPopular: true,
   ),
   Product(
-    id: 4,
+      id: 6,
+      images: [
+        'assets/images/tissue2.png',
+      ],
+      colors: [
+        Color(0xFFF6625E),
+        Color(0xFF836DB8),
+        Color(0xFFDECB9C),
+        Colors.white,
+      ],
+      title: 'Eco friendly soft toilet paper',
+      price: 65,
+      discountQuantity: 6,
+      description: description,
+      rating: 4.1,
+      isPopular: true),
+  Product(
+      id: 7,
+      images: [
+        'assets/images/tissue3.png',
+      ],
+      colors: [
+        Color(0xFFF6625E),
+        Color(0xFF836DB8),
+        Color(0xFFDECB9C),
+        Colors.white
+      ],
+      title: 'Disposable eco toilet paper',
+      price: 65,
+      discountQuantity: 6,
+      description: description,
+      rating: 4.1,
+      isFavourite: true,
+      isPopular: true),
+  Product(
+    id: 8,
     images: [
-      "assets/images/wireless headset.png",
+      'assets/images/tissue4.png',
     ],
     colors: [
       Color(0xFFF6625E),
@@ -91,8 +173,9 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head",
-    price: 20.20,
+    title: 'Soft baby glow toilet paper',
+    price: 65,
+    discountQuantity: 6,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -100,4 +183,7 @@ List<Product> demoProducts = [
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    'Smooth factory prepared face mask. Made of hand made cotton.';
+
+const String tissueDescription =
+    'Smooth factory prepared toilet paper. Made from Egyptian plant.';

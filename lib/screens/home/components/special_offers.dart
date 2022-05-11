@@ -11,13 +11,14 @@ class SpecialOffers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SectionTitle(
-            title: "Special for you",
-            press: () {},
+            title: 'Special for you',
+            onPress: () {},
           ),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
@@ -26,16 +27,16 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
-                category: "Smartphone",
+                image: 'assets/images/soaps.jpeg',
+                category: 'Soaps',
                 numOfBrands: 18,
-                press: () {},
+                onPress: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
+                image: 'assets/images/towel.png',
+                category: 'Towels',
                 numOfBrands: 24,
-                press: () {},
+                onPress: () {},
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
@@ -52,19 +53,19 @@ class SpecialOfferCard extends StatelessWidget {
     required this.category,
     required this.image,
     required this.numOfBrands,
-    required this.press,
+    required this.onPress,
   }) : super(key: key);
 
   final String category, image;
   final int numOfBrands;
-  final GestureTapCallback press;
+  final GestureTapCallback onPress;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
       child: GestureDetector(
-        onTap: press,
+        onTap: onPress,
         child: SizedBox(
           width: getProportionateScreenWidth(242),
           height: getProportionateScreenWidth(100),
@@ -72,18 +73,15 @@ class SpecialOfferCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Stack(
               children: [
-                Image.asset(
-                  image,
-                  fit: BoxFit.cover,
-                ),
+                Image.asset(image, width: double.infinity, fit: BoxFit.cover),
                 Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color(0xFF343434).withOpacity(0.4),
-                        Color(0xFF343434).withOpacity(0.15),
+                        const Color(0xFF343434).withOpacity(0.4),
+                        const Color(0xFF343434).withOpacity(0.15),
                       ],
                     ),
                   ),
@@ -95,16 +93,16 @@ class SpecialOfferCard extends StatelessWidget {
                   ),
                   child: Text.rich(
                     TextSpan(
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       children: [
                         TextSpan(
-                          text: "$category\n",
+                          text: '$category\n',
                           style: TextStyle(
                             fontSize: getProportionateScreenWidth(18),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfBrands Brands")
+                        TextSpan(text: '$numOfBrands Brands')
                       ],
                     ),
                   ),

@@ -3,14 +3,22 @@ import 'Product.dart';
 class Cart {
   final Product product;
   final int numOfItem;
+  final String discount;
+  final double totalPrice;
 
-  Cart({required this.product, required this.numOfItem});
+  Cart(
+      {required this.product,
+      required this.numOfItem,
+      required this.discount,
+      required this.totalPrice});
 }
 
-// Demo data for our cart
+List<Cart> demoCarts = [];
 
-List<Cart> demoCarts = [
-  Cart(product: demoProducts[0], numOfItem: 2),
-  Cart(product: demoProducts[1], numOfItem: 1),
-  Cart(product: demoProducts[3], numOfItem: 1),
-];
+String totalPrice(){
+  var price = 0.0;
+  for(var item in demoCarts){
+    price += item.totalPrice;
+  }
+  return price.toString();
+}

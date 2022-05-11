@@ -2,7 +2,6 @@ import 'package:bt_commerce/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
-// This is the best practice
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import 'splash_content.dart';

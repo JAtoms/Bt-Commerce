@@ -1,3 +1,4 @@
+import 'package:bt_commerce/models/Cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,6 +13,7 @@ class CheckoutCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: getProportionateScreenWidth(15),
@@ -20,15 +22,15 @@ class CheckoutCard extends StatelessWidget {
       // height: 174,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
         ),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -15),
+            offset: const Offset(0, -15),
             blurRadius: 20,
-            color: Color(0xFFDADADA).withOpacity(0.15),
+            color: const Color(0xFFDADADA).withOpacity(0.15),
           )
         ],
       ),
@@ -59,13 +61,13 @@ class CheckoutCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text.rich(
+                Text.rich(
                   TextSpan(
                     text: 'Total:\n',
                     children: [
                       TextSpan(
-                          text: '\$337.15',
-                          style: TextStyle(fontSize: 16, color: Colors.black)),
+                          text: '£${totalPrice()}',
+                          style: const TextStyle(fontSize: 16, color: Colors.black)),
                     ],
                   ),
                 ),

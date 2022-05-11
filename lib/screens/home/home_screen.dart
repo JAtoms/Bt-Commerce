@@ -5,12 +5,17 @@ import '../../enums.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
-  static String routeName = "/home";
+  static String routeName = '/home';
+
+  const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: const Scaffold(
+        bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+        body: Body(),
+      ),
     );
   }
 }
