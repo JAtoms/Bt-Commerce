@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -16,6 +15,7 @@ class CartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           width: 88,
@@ -31,24 +31,35 @@ class CartCard extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 20),
+        const SizedBox(width: 20),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              cart.product.title,
-              style: TextStyle(color: Colors.black, fontSize: 16),
-              maxLines: 2,
-            ),
-            SizedBox(height: 10),
+            Text(cart.product.title,
+                style: const TextStyle(color: Colors.black, fontSize: 16),
+                maxLines: 2),
+            const SizedBox(height: 10),
             Text.rich(
               TextSpan(
-                text: "\$${cart.product.price}",
-                style: TextStyle(
+                text: '£${cart.product.price}',
+                style: const TextStyle(
                     fontWeight: FontWeight.w600, color: kPrimaryColor),
                 children: [
                   TextSpan(
-                      text: " x${cart.numOfItem}",
+                      text: ' x${cart.numOfItem}',
+                      style: Theme.of(context).textTheme.bodyText1),
+                ],
+              ),
+            ),
+            const SizedBox(height: 1),
+            Text.rich(
+              TextSpan(
+                text: 'Total: ${cart.totalPrice}',
+                style: const TextStyle(
+                    fontWeight: FontWeight.w600, color: kPrimaryColor),
+                children: [
+                  TextSpan(
+                      text: '     Discount £${cart.discount}',
                       style: Theme.of(context).textTheme.bodyText1),
                 ],
               ),

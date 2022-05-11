@@ -8,19 +8,19 @@ class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
     Key? key,
     required this.svgSrc,
-    this.numOfitem = 0,
-    required this.press,
+    this.numOfItem = 0,
+    required this.onPress,
   }) : super(key: key);
 
   final String svgSrc;
-  final int numOfitem;
-  final GestureTapCallback press;
+  final int numOfItem;
+  final GestureTapCallback onPress;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(100),
-      onTap: press,
+      onTap: onPress,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -34,7 +34,7 @@ class IconBtnWithCounter extends StatelessWidget {
             ),
             child: SvgPicture.asset(svgSrc),
           ),
-          if (numOfitem != 0)
+          if (numOfItem != 0)
             Positioned(
               top: -3,
               right: 0,
@@ -48,7 +48,7 @@ class IconBtnWithCounter extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "$numOfitem",
+                    '$numOfItem',
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(10),
                       height: 1,
