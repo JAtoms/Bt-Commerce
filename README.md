@@ -1,16 +1,37 @@
-# bt_commerce
+# BT Commerce
 
-A new Flutter project.
+This is a test project which mocks an ecommerce site. 
+Major items in the stores are toilet papers and face masks.
 
-## Getting Started
+The app has the following screens:
+* Splash screen
+* Onboard screens
+* Product or market screen
+* Item detail page
+* Profile screen
 
-This project is a starting point for a Flutter application.
+This e-commerce app has a cart feature whose database is a list. Items can be added 
+and discount is applied when items are in even numbers. A dialog is shown when an item
+is added to a cart.
 
-A few resources to get you started if this is your first Flutter project:
+The cart screen has to states
+* One when there is no item in the cart
+* When there is(are) item(s) in the cart.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Explainer video
+
+A short video has been added to explain how the app works.
+
+- [Explainer video](https://www.loom.com/share/921954adae504e5c9624bd236d52e01c)
+
+
+
+# Test App
+
+Sure, you can test the functionality of this App from the link below. The app is 'provided
+in different apks to suit any device.
+
+- [Test Apps](https://www.loom.com/share/921954adae504e5c9624bd236d52e01c)
+
+
