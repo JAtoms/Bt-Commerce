@@ -19,33 +19,36 @@ class _BodyState extends State<Body> {
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: ListView.builder(
-        itemCount: demoCarts.length,
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: Dismissible(
-            key: Key(demoCarts[index].product.id.toString()),
-            direction: DismissDirection.endToStart,
-            onDismissed: (direction) {
-              setState(() {
-                demoCarts.removeAt(index);
-              });
-            },
-            background: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              decoration: BoxDecoration(
-                  color: kFadedPink, borderRadius: BorderRadius.circular(15)),
-              child: Row(
-                children: [
-                  const Spacer(),
-                  SvgPicture.asset('assets/icons/Trash.svg')
-                ],
+      child: demoCarts.isEmpty
+          ? Center(child: Text('Your cart is empty'))
+          : ListView.builder(
+              itemCount: demoCarts.length,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Dismissible(
+                  key: Key(demoCarts[index].product.id.toString()),
+                  direction: DismissDirection.endToStart,
+                  onDismissed: (direction) {
+                    setState(() {
+                      demoCarts.removeAt(index);
+                    });
+                  },
+                  background: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    decoration: BoxDecoration(
+                        color: kFadedPink,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Row(
+                      children: [
+                        const Spacer(),
+                        SvgPicture.asset('assets/icons/Trash.svg')
+                      ],
+                    ),
+                  ),
+                  child: CartCard(cart: demoCarts[index]),
+                ),
               ),
             ),
-            child: CartCard(cart: demoCarts[index]),
-          ),
-        ),
-      ),
     );
   }
 }
