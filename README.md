@@ -35,3 +35,29 @@ in different apks to suit any device.
 - [Test Apps](https://github.com/JAtoms/Bt-Commerce/tree/dashboard/assets/test_app)
 
 
+## Folder and code structure
+
+Folders and codes are organized in a loose and shallow feature-first fashion.
+In `lib/src`, you'll therefore find directories such as `ads`, `audio`
+or `main_menu`. Nothing fancy, but usable.
+
+```
+lib
+├── src
+│   ├── components
+│   ├── helpers
+│   ├── models
+│   ├── screens
+          │   ├── cart
+                    │   ├── components
+          │   ├── details
+                    │   ├── components
+          │   ├── home
+                    │   ├── components
+          │   ├── profile
+                    │   ├── components
+          │   ├── splash
+                    │   ├── components
+├── ...
+└── main.dart
+
