@@ -11,14 +11,31 @@ class Cart {
       required this.numOfItem,
       required this.discount,
       required this.totalPrice});
-}
 
-List<Cart> demoCarts = [];
+  static List<Cart> demoCarts = [];
 
-String totalPrice(){
-  var price = 0.0;
-  for(var item in demoCarts){
-    price += item.totalPrice;
+  static String sumOfAllPrice() {
+    var price = 0.0;
+    for (var item in demoCarts) {
+      price += item.totalPrice;
+    }
+    return price.toString();
   }
-  return price.toString();
+
+  static bool addItemToCart(
+      {required Product product,
+      required int numOfItem,
+      required String discount,
+      required double totalPrice}) {
+    try {
+      demoCarts.add(Cart(
+          product: product,
+          numOfItem: numOfItem,
+          discount: discount,
+          totalPrice: totalPrice));
+      return true;
+    } catch (e, s) {
+      return false;
+    }
+  }
 }

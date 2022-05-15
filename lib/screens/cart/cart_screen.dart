@@ -23,7 +23,7 @@ class CartScreen extends StatelessWidget {
       title: Column(
         children: [
           const Text('Your Cart', style: TextStyle(color: Colors.black)),
-          Text('${demoCarts.length} items',
+          Text('${Cart.demoCarts.length} items',
               style: Theme.of(context).textTheme.caption),
         ],
       ),

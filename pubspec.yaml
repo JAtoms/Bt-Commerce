@@ -21,6 +21,9 @@ dependencies:
   # For SVG image
   flutter_svg: ^0.22.0
 
+  # For tests
+  mocktail: ^0.3.0
+
   # For state management
   flutter_riverpod: ^0.14.0+3
 
