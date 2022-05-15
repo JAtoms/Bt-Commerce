@@ -27,6 +27,14 @@ A short video has been added to explain how the app works.
 
 
 
+# Video explaining the Unit tests
+
+A short video which show the unit tests and how items can be removed from App through sliding.
+
+- [Explainer video](https://www.loom.com/share/5009949ab74e4e58b3c3552fe25b7fc5)
+
+
+
 # Test App
 
 Sure, you can test the functionality of this App from the link below. The app is 'provided
@@ -35,7 +43,7 @@ in different apks to suit any device.
 - [Test Apps](https://github.com/JAtoms/Bt-Commerce/tree/dashboard/assets/test_app)
 
 
-## Folder and code structure
+# Folder and code structure
 
 Folders and codes are organized in a loose and shallow feature-first fashion.
 In `lib/src`, you'll therefore find directories such as `ads`, `audio`
