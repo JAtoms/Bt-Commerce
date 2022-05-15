@@ -19,18 +19,18 @@ class _BodyState extends State<Body> {
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: demoCarts.isEmpty
-          ? Center(child: Text('Your cart is empty'))
+      child: Cart.demoCarts.isEmpty
+          ? const Center(child: Text('Your cart is empty'))
           : ListView.builder(
-              itemCount: demoCarts.length,
+              itemCount: Cart.demoCarts.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Dismissible(
-                  key: Key(demoCarts[index].product.id.toString()),
+                  key: Key(Cart.demoCarts[index].product.id.toString()),
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) {
                     setState(() {
-                      demoCarts.removeAt(index);
+                      Cart.removeItemFromCart(index: index);
                     });
                   },
                   background: Container(
@@ -45,7 +45,7 @@ class _BodyState extends State<Body> {
                       ],
                     ),
                   ),
-                  child: CartCard(cart: demoCarts[index]),
+                  child: CartCard(cart: Cart.demoCarts[index]),
                 ),
               ),
             ),

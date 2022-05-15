@@ -2,6 +2,7 @@ import 'package:bt_commerce/models/Cart.dart';
 import 'package:bt_commerce/screens/add_to_cart_dailog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../../../components/default_button.dart';
 import '../../../models/Product.dart';
@@ -53,17 +54,19 @@ class Body extends ConsumerWidget {
                         child: DefaultButton(
                           text: 'Add To Cart',
                           onPress: () {
-                            demoCarts.add(Cart(
+                            bool addToCartResult = Cart.addItemToCart(
                                 product: product,
                                 numOfItem: itemQty,
+                                discount: itemDiscount,
                                 totalPrice: itemTotalPrice == 0
                                     ? product.price
-                                    : itemTotalPrice,
-                                discount: itemDiscount));
-                            showDialog(
-                                context: context,
-                                builder: (context) =>
-                                    AddToCartDialog(product: product));
+                                    : itemTotalPrice);
+                            addToCartResult
+                                ? showDialog(
+                                    context: context,
+                                    builder: (context) =>
+                                        AddToCartDialog(product: product))
+                                : Fluttertoast.showToast(msg: 'Unable to add item to cart');
                           },
                         ),
                       ),

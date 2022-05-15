@@ -23,7 +23,7 @@ class Product {
   });
 }
 
-// Our demo Products
+// Our Face Masks
 
 List<Product> faceMasks = [
   Product(
@@ -54,9 +54,9 @@ List<Product> faceMasks = [
         'assets/images/mask1.png',
       ],
       colors: [
-        Color(0xFFF6625E),
-        Color(0xFF836DB8),
-        Color(0xFFDECB9C),
+        const Color(0xFFF6625E),
+        const Color(0xFF836DB8),
+        const Color(0xFFDECB9C),
         Colors.white,
       ],
       title: 'Brown surgical face mask',
@@ -71,9 +71,9 @@ List<Product> faceMasks = [
         'assets/images/mask2.png',
       ],
       colors: [
-        Color(0xFFF6625E),
-        Color(0xFF836DB8),
-        Color(0xFFDECB9C),
+        const Color(0xFFF6625E),
+        const Color(0xFF836DB8),
+        const Color(0xFFDECB9C),
         Colors.white
       ],
       title: 'White surgical face mask',
@@ -89,9 +89,9 @@ List<Product> faceMasks = [
       'assets/images/mask4.png',
     ],
     colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
       Colors.white,
     ],
     title: 'Premium cotton navy face mask',
@@ -103,9 +103,7 @@ List<Product> faceMasks = [
   ),
 ];
 
-
-
-// Our demo Products
+// Our Toilet Rolls
 
 List<Product> toiletRoll = [
   Product(
@@ -133,9 +131,9 @@ List<Product> toiletRoll = [
         'assets/images/tissue2.png',
       ],
       colors: [
-        Color(0xFFF6625E),
-        Color(0xFF836DB8),
-        Color(0xFFDECB9C),
+        const Color(0xFFF6625E),
+        const Color(0xFF836DB8),
+        const Color(0xFFDECB9C),
         Colors.white,
       ],
       title: 'Eco friendly soft toilet paper',
@@ -150,9 +148,9 @@ List<Product> toiletRoll = [
         'assets/images/tissue3.png',
       ],
       colors: [
-        Color(0xFFF6625E),
-        Color(0xFF836DB8),
-        Color(0xFFDECB9C),
+        const Color(0xFFF6625E),
+        const Color(0xFF836DB8),
+        const Color(0xFFDECB9C),
         Colors.white
       ],
       title: 'Disposable eco toilet paper',
@@ -168,9 +166,9 @@ List<Product> toiletRoll = [
       'assets/images/tissue4.png',
     ],
     colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
       Colors.white,
     ],
     title: 'Soft baby glow toilet paper',
