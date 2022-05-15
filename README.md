@@ -48,16 +48,16 @@ lib
 │   ├── helpers
 │   ├── models
 │   ├── screens
-          │   ├── cart
-                    │   ├── components
-          │   ├── details
-                    │   ├── components
-          │   ├── home
-                    │   ├── components
-          │   ├── profile
-                    │   ├── components
-          │   ├── splash
-                    │   ├── components
+          ├── cart
+              ├── components
+          ├── details
+              ├── components
+          ├── home
+              ├── components
+          ├── profile
+              ├── components
+          ├── splash
+              ├── components
 ├── ...
 └── main.dart
 
