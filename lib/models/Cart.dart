@@ -1,16 +1,12 @@
 import 'Product.dart';
 
 class Cart {
-  final Product product;
-  final int numOfItem;
-  final String discount;
-  final double totalPrice;
+  Product product;
+  int numOfItem;
+  String discount;
+  double totalPrice;
 
-  Cart(
-      {required this.product,
-      required this.numOfItem,
-      required this.discount,
-      required this.totalPrice});
+  Cart(this.product, this.numOfItem, this.discount, this.totalPrice);
 
   static List<Cart> demoCarts = [];
 
@@ -28,11 +24,16 @@ class Cart {
       required String discount,
       required double totalPrice}) {
     try {
-      demoCarts.add(Cart(
-          product: product,
-          numOfItem: numOfItem,
-          discount: discount,
-          totalPrice: totalPrice));
+      demoCarts.add(Cart(product, numOfItem, discount, totalPrice));
+      return true;
+    } catch (e, s) {
+      return false;
+    }
+  }
+
+  static bool removeItemFromCart({required int index}) {
+    try {
+      demoCarts.removeAt(index);
       return true;
     } catch (e, s) {
       return false;

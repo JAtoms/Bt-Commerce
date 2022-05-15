@@ -30,7 +30,7 @@ class _BodyState extends State<Body> {
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) {
                     setState(() {
-                      Cart.demoCarts.removeAt(index);
+                      Cart.removeItemFromCart(index: index);
                     });
                   },
                   background: Container(
